@@ -2,7 +2,7 @@
 
 Terminal-based ECS shooter written in C++ as a learning project.
 
-**▶ Play in browser:** [https://mohit491aa.github.io/shooter-game/]
+**▶ Play in browser:** https://mohit491aa.github.io/shooter-game/
 
 Also runs in a POSIX terminal (macOS / Linux). Single codebase — only the backend (terminal vs wasm) differs.
 
