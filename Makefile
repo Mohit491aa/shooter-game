@@ -1,7 +1,7 @@
 CXX      := clang++
 CXXFLAGS := -std=c++17 -O2 -Wall -Wextra
 
-EMCC      := emcc
+EMCC      := em++
 EMCCFLAGS := -O2 -s ALLOW_MEMORY_GROWTH=1 -s EXPORTED_RUNTIME_METHODS=HEAP8
 
 PORT := 8000
@@ -33,7 +33,7 @@ docs:
 	mkdir -p docs
 
 docs/index.html: wasm-einz.cpp $(CORE_DEPS) wasm.hpp shell.html | docs
-	$(em++) wasm-einz.cpp -o docs/index.html --shell-file shell.html $(EMCCFLAGS)
+	$(EMCC) wasm-einz.cpp -o docs/index.html --shell-file shell.html $(EMCCFLAGS)
 
 web: pages
 	@echo "Open http://localhost:$(PORT)/"
