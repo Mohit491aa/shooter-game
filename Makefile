@@ -33,7 +33,7 @@ docs:
 	mkdir -p docs
 
 docs/index.html: wasm-einz.cpp $(CORE_DEPS) wasm.hpp shell.html | docs
-	$(EMCC) wasm-einz.cpp -o docs/index.html --shell-file shell.html $(EMCCFLAGS)
+	$(em++) wasm-einz.cpp -o docs/index.html --shell-file shell.html $(EMCCFLAGS)
 
 web: pages
 	@echo "Open http://localhost:$(PORT)/"
